@@ -1,6 +1,6 @@
 # ModelPlaneInfo.ConsoleEditor
 
-Old project with minimal changes made due to migration of the project from the .NET Framework 4.7.2. platform to the .NET Core 6.0 platform. The project was developed as a final project from the "Programming" educational subject to confirm its successful completion
+It's an old project with minimal changes made due to migration of the project from the .NET Framework 4.7.2. platform to the .NET Core 6.0 platform. The project was developed as a final project from the "Programming" educational subject to confirm its successful completion.
 
 ## Project structure
 ```bash
@@ -118,7 +118,7 @@ The landing gear project includes the following patterns:
 **Image 1 - The structure of classes for the implementation of the controller for saving data to a file (Strategy pattern)** 
 
 
-The Strategy pattern allows you to define a family of interchangeable algorithms and make them interchangeable at runtime. In this case, the Save and Load methods are dependent on a fileIoController object that implements the IFileIoController interface. By using the IFileIoController interface, the classes can work with different types of file I/O controllers without needing to know their specific implementations. This allows for greater flexibility in the application and makes it easier to swap out different file I/O controllers at runtime. Overall, the Save and Load methods act as the context in the Strategy pattern, while the IFileIoController interface and its various implementations represent the strategy.
+The `Strategy` pattern allows you to define a family of interchangeable algorithms and make them interchangeable at runtime. In this case, the Save and Load methods are dependent on a fileIoController object that implements the IFileIoController interface. By using the `IFileIoController` interface, the classes can work with different types of file I/O controllers without need to know their specific implementations. This gives greater flexibility in the application and makes it easier to swap out different file I/O controllers at runtime. Overall, the Save and Load methods act as the context in the Strategy pattern, while the IFileIoController interface and its various implementations represent the strategy.
 
 <img src="https://user-images.githubusercontent.com/70714177/219955930-aab39b8e-cd6d-4c76-89ac-4a3a6bd763eb.png" width="50%"></img>
 
@@ -126,7 +126,7 @@ The Strategy pattern allows you to define a family of interchangeable algorithms
 
 The `Command` delegate represents an operation to be executed. The `CommandInfo` struct acts as a container for a command and its name. This pattern allows you to encapsulate requests or operations as objects, which can be used to parameterize methods. This makes it possible to delay execution of the request, queue it for later execution, and support undoable operations.
 In this case, the `Command` delegate represents the operation that needs to be executed, while the `CommandInfo` struct provides a way to associate a name with a command. This allows you to create a collection of `CommandInfo` objects, which can be used to represent a list of commands that can be executed.
-Overall, the Command pattern provides a way to decouple the requester of an action from the object that performs the action, and allows for greater flexibility and extensibility in an application.
+Overall, the Command pattern provides a way to decouple the requester of an action from the object that performs the action, and gives flexibility and extensibility in an application.
 
 <img src="https://user-images.githubusercontent.com/70714177/219956981-11bd0961-b9a9-41e4-aee6-1093f1becaa8.png" width="50%"></img>
 
@@ -134,8 +134,10 @@ Overall, the Command pattern provides a way to decouple the requester of an acti
 
 The `Unit of Work` and `Repository` patterns are two widely used design patterns in software development, often used together in data access layers. 
 The `Repository` pattern provides an abstraction layer between the application code and the database, providing a clean separation of concerns between data access and business logic. This pattern defines an interface for data operations, which is implemented by a concrete repository class that performs database operations. By doing so, it allows developers to create a single, consistent data access layer for the application.
+
 The `Unit of Work` pattern manages the transactions and the connectivity to the data source. It provides a way to group multiple database operations into a single transaction, ensuring that all database changes are consistent and atomic. The Unit of Work pattern also ensures that multiple repository objects can share a single database connection, reducing the number of connections used and improving performance.
-Together, these patterns provide a way to create a robust and scalable data access layer. The Repository pattern abstracts away the details of the database, while the Unit of Work pattern manages the transactions and connections. This separation of concerns makes the code easier to maintain and test, and makes it easier to swap out the underlying database without affecting the rest of the application.
+
+Together, these patterns provide a way to create a robust and scalable data access layer. The `Repository` pattern abstracts away the details of the database, while the `Unit of Work` pattern manages the transactions and connections. This separation of concerns makes the code easier to maintain and test, and makes it easier to swap out the underlying database without affecting the rest of the application.
 
 ## Conclusions
 
